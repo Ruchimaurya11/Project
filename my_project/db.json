@@ -1,0 +1,41 @@
+{
+    "user":[
+        {
+            "id":1,
+            "name":"user",
+            "mail":"user@gmail.com",
+            "password":"abcd"
+
+        }
+    ],
+    "admin":[
+        {
+           "id":1,
+            "name":"admin",
+            "mail":"admin@gmail.com",
+            "password":"abcd" 
+        }
+    ],
+    "services":[
+        {
+            "id":1,
+            "url":"https://themewagon.github.io/logistica/img/service-1.jpg",
+            "title":"Air Freight",
+            "Desc":"Its Fast for shiping"
+            
+        },
+        {
+            "id":2,
+            "url":"https://themewagon.github.io/logistica/img/service-2.jpg",
+            "title":"Ocean Freight",
+            "Desc":"Its for safe"
+            
+        },
+        {
+            "id":3,
+            "url":"https://themewagon.github.io/logistica/img/service-3.jpg",
+            "title":"Road Freight",
+            "Desc":"one place to another place using road"
+        }
+    ]
+}
