@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@include file="header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+         <div class="attending_area plus_padding" style="margin-top:100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="main_attending_area">
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="popup_box ">
+                                    <div class="popup_inner">
+                                     <%
+                                    String msg = (String)request.getAttribute("msg");
+                                    if(msg!=null){
+                                    	%>
+                                    	 <div class="form_heading text-center">
+                                            <h5><%out.print(msg); %></h5>
+                                        </div>
+                                    	<%
+                                    }
+                                    
+                                    %>
+                                        <div class="form_heading text-center">
+                                            <h3>Wedding Planner</h3>
+                                        </div>
+                                        <form action="WP_Controller" method="post">
+                                        	<%String email = (String)request.getAttribute("email"); %>
+                                            <div class="row">
+                                            	<input type="hidden" name="email" value="<%=email %>">
+                                                <div class="col-xl-12">
+                                                    <input type="password" name="np" placeholder="Enter New Password">
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <input type="password" name="cnp" placeholder="Confirm New Password">
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <button type="submit" name="action" value="cnp" class="boxed_btn3">Change Password</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="form_heading text-center">
+                                            <h3><a href="w-forgot-password.jsp">Forgot Password?</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
